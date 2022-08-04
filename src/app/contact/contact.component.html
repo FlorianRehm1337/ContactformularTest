@@ -1,0 +1,18 @@
+<div class="form-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Input</mat-label>
+    <input matInput placeholder="name" [formControl]="name" required>
+    <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your email</mat-label>
+    <input matInput placeholder="email" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Textarea</mat-label>
+    <textarea matInput placeholder="message" [formControl]="message" required></textarea>
+    <mat-error *ngIf="message.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <button mat-raised-button color="accent">Accent</button>
+</div>
